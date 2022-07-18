@@ -10,13 +10,13 @@ io.on('connection', (client) => {
         client.emit("message", {
           userId: usuario.id,
           username: usuario.username,
-          text: `Welcome ${usuario.username}`,
+          text: `Bienvenido ${usuario.username}`,
         });
     
         client.broadcast.to(usuario.room).emit("message", {
           userId: usuario.id,
           username: usuario.username,
-          text: `${usuario.username} has joined the chat`,
+          text: `${usuario.username} ha entrado al chat`,
         });
     });
 
@@ -46,7 +46,7 @@ io.on('connection', (client) => {
             io.to(usuario.room).emit("message", {
                 userId: usuario.id,
                 username: usuario.username,
-                text: `${usuario.username} has left the chat`,
+                text: `${usuario.username} ha dejado el chat`,
             });
         }
     });
