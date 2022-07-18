@@ -19,4 +19,4 @@ socket.emit('mensajeCliente', {
 //Escuchar
 socket.on('mensajeServidor', (mensaje) => {
     console.log(mensaje);
-})
+});

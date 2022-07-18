@@ -21,4 +21,4 @@ const deleteUsuario = (id) => {
     }
 }
 
-module.exports = { ingresarUsuarios,  getUsuario, deleteUsuario  };
+module.exports = { ingresarUsuarios, getUsuario, deleteUsuario  };
