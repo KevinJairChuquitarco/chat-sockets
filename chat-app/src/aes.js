@@ -7,7 +7,7 @@ export const to_Encrypt = (text) => {
   return encrypted;
 };
 export const to_Decrypt = (cipher, username) => {
-  if (cipher.startsWith("Welcome")) {
+  if (cipher.startsWith("Bienvenido")) {
     return cipher;
   }
 
