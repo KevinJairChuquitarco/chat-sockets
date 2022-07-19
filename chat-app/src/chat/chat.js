@@ -53,6 +53,7 @@ const Chat = ({ username, socket }) => {
       <div class="messageBody">
         <div class="messageBox">
           <span class="meta">
+          <i class="metaBG"></i>
             <span class="badges">
             </span>
               <h2 className="name">
