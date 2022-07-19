@@ -7,7 +7,7 @@ import io from "socket.io-client";
 
 const socket = io.connect('/');
 const Appmain =(props) =>{
-  alert("Se unio"+props.match.params.username);
+  //alert("Se unió "+props.match.params.username);
   return (
     <React.Fragment>
       <div>

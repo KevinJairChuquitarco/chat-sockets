@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import "./home.css";
 const Homepage = ({ socket })=> {
   const [username, setusername] = useState("");
   const [roomname, setroomname] = useState("chat");
@@ -15,9 +15,9 @@ const Homepage = ({ socket })=> {
   };
 
   return (
-    <div>
+    <div className="contenedor">
       <h1>Aplicación de chat</h1>
-      <input
+      <input className="ingreso"
         placeholder="Ingrese su nombre"
         value={username}
         onChange={(e) => setusername(e.target.value)}
@@ -27,7 +27,7 @@ const Homepage = ({ socket })=> {
           }}}
       />
       <Link to={`/chat/${username}`}>
-        <button onClick={sendData}>Entrar</button>
+        <button className="boton" onClick={sendData}>Entrar</button>
       </Link>
     </div>
   );
