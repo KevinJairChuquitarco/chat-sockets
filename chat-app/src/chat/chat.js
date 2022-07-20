@@ -16,7 +16,6 @@ const Chat = ({ username, socket }) => {
 
   useEffect(() => {
     socket.on("message", (data) => {
-      //decypt
       const ans = to_Decrypt(data.text, data.username);
       dispatchProcess(false, ans, data.text);
       console.log(ans);
@@ -32,7 +31,6 @@ const Chat = ({ username, socket }) => {
 
   const sendData = () => {
     if (text !== "") {
-      //encrypt here
       const ans = to_Encrypt(text);
       socket.emit("chat", ans);
       setText("");
@@ -128,7 +126,7 @@ const Chat = ({ username, socket }) => {
             }
           }}
         ></input>
-        <button className="boton" onClick={sendData}>Send</button>
+        <button className="boton" onClick={sendData}>Enviar</button>
       </div>
     </div>
   );

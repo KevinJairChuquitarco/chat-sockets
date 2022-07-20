@@ -21,7 +21,6 @@ io.on('connection', (client) => {
     });
 
     client.on("chat", (mensaje) => {
-        //gets the room user and the message sent
         const usuario = getUsuario(client.id);
     
         io.to(usuario.room).emit("message", {
